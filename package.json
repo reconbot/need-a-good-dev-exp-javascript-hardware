@@ -4,7 +4,8 @@
   "description": "A talk I first gave at Node Live Boston",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
