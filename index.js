@@ -1,4 +1,5 @@
 var remark = require('remark');
+require('./src/style.css');
 
 var context = require.context('./src', true, /.*\.md$/);
 

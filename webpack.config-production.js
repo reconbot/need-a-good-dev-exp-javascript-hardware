@@ -1,4 +1,5 @@
 var HtmlPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -15,7 +16,7 @@ module.exports = {
     loaders: [
       {
         test: /.*\.css/,
-        loader: 'style-loader!css-loader!postcss-loader'
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader')
       },
       {
         test: /.*\.md/,
@@ -35,6 +36,7 @@ module.exports = {
     new HtmlPlugin({
       template: '!!raw-loader!./index.html',
     }),
+    new ExtractTextPlugin('[contenthash].css')
   ],
   postcss: () => {
     return [require('autoprefixer')];

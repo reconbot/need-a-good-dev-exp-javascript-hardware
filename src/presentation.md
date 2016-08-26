@@ -46,15 +46,21 @@ I work on
  - [Johnny-Five](http://johnny-five.io/)
  - [Tessel 2](https://tessel.io/)
 
-^ node sp provides serialport access to over 25 platforms across versions of node, cross platform and on all sorts of cpus, in the top 1-2% of all npm packages
+???
+
+- Node SerialPort provides serial port access to over 25 platforms across versions of node, operating systems and on all sorts of cpus
+- it's in the top 1-2% of all npm packages
 
 ---
+
 
 ![fit](j5-logo.png)
 
 ![fit](j5.png)
 
-^ Johnny Five provides a javascript hardware abstraction layer and device drivers. Meaning you can write an app once an use it anywhere.
+???
+
+Johnny Five provides a javascript hardware abstraction layer and device drivers. Meaning you can write an app once an use it anywhere.
 
 ---
 
@@ -64,17 +70,23 @@ I work on
 
 ![fit](tessel-board.jpg)
 
-^ Tessel provides the best user experience for deploying, managing and running your JS code on a single board computer. Soon Rust!
+???
+
+Tessel provides the best user experience for deploying, managing and running your JS code on a single board computer. Soon Rust!
 
 ---
 
-^ Sorry that's a lot about me, but you should know who I am because I'm going to ask you to believe me
+???
+
+Sorry that's a lot about me, but you should know who I am because I'm going to ask you to believe me
 
 ---
 
 # We need a good developer experience for JavaScript Hardware.
 
-^ because
+???
+
+because
 
 ---
 
@@ -112,7 +124,9 @@ void EIO_Open(uv_work_t* req) {
     NULL
   );
 ```
-^ look at this horrible `c++` I wrote
+???
+
+look at this horrible `c++` I wrote
 
 ---
 # `C++`
@@ -122,44 +136,58 @@ void EIO_Open(uv_work_t* req) {
 - hard to not make mistakes
 - really hard to work online
 
-^ remember heartbleed?
+???
+
+remember heartbleed?
 
 ---
 
 # Rust
 
-![inline](rust-logo.png)
+.middle[![](rust-logo.png)]
 
-^ I'm enjoying learning rust more than the 10 years of c++ I've failed
+???
 
-^ c is 44 years old
-
-^ C++ is 33 years old
+- I'm enjoying learning rust
+- I've learned more in a few weekends more than the 10 years of c++
+- C is 44 years old
+- C++ is 33 years old
+- Not a fair comparison
 
 ---
 
+.middle[
 > "`C++` is a horrible language."
 --Linus Torvald Out of Context
+]
 
-^ He actually likes C but that's horrible too
+???
+
+He actually likes C but that's horrible too
 
 ---
 
 # We need a good developer experience for JavaScript Hardware.
 
-^ I didn't answer your question, lets try again
+???
+
+I didn't answer your question, lets try again
 
 ---
 
 # Firmware is C++
 
-^ actually it's assembly
+???
+
+actually it's assembly
 
 ---
 
 ![fit](toaster.jpg)
 
-^ and it's everywhere
+???
+
+and it's everywhere
 
 ---
 
@@ -173,13 +201,17 @@ void EIO_Open(uv_work_t* req) {
 
 ![fit](tiny-wifi.jpg)
 
-^ In anything with wifi
+???
+
+In anything with wifi
 
 ---
 
 ![](carchip.jpg)
 
-^ in your car
+???
+
+in your car
 
 ---
 
@@ -189,7 +221,9 @@ void EIO_Open(uv_work_t* req) {
 
 # We need a good developer experience for JavaScript Hardware.
 
-^ Still don't know why
+???
+
+Still don't know why
 
 ---
 
@@ -199,7 +233,9 @@ void EIO_Open(uv_work_t* req) {
 
 ![fit](IoT-company-ranking-Q3-Q4-2015-Matrix-of-leading-companies-v1-min.png)
 
-^ for one reason
+???
+
+for one reason
 
 ---
 
@@ -213,7 +249,9 @@ void EIO_Open(uv_work_t* req) {
 
 # Devices + Web = IoT
 
-^ Every device manufacturer wants to be "web"
+???
+
+Every device manufacturer wants to be "web"
 
 ---
 
@@ -224,13 +262,17 @@ void EIO_Open(uv_work_t* req) {
 
 # `C++` is horrible
 
-^ Yeah but I'll need some evidence
+???
+
+Yeah but I'll need some evidence
 
 ---
 
 ![fit](wifi kettle why.gif)
 
-^ Researchers at an infosec conference discover simple already solved bugs in IoT devices
+???
+
+Researchers at an infosec conference discover simple already solved bugs in IoT devices
 
 ---
 
@@ -242,7 +284,9 @@ void EIO_Open(uv_work_t* req) {
 > "Manufactures of these *things* don't get security."
 -- "Pen Test Partners" @ Infosecurity Europe 2015
 
-^ https://www.youtube.com/watch?v=GDy9Nvcw4O4
+???
+
+https://www.youtube.com/watch?v=GDy9Nvcw4O4
 
 ---
 
@@ -252,21 +296,29 @@ void EIO_Open(uv_work_t* req) {
 ---
 ![fit](complaint from the future.png)
 
-^ https://twitter.com/VirtualTal/status/424077709598146560
+???
+
+https://twitter.com/VirtualTal/status/424077709598146560
 
 ---
 
 ![fit](ransomware-thermostat.jpg)
 
-^ Defcon 2016 http://motherboard.vice.com/read/internet-of-things-ransomware-smart-thermostat
+???
 
-^ also the nest has been hacked! Takes 15 seconds http://www.forbes.com/sites/aarontilley/2015/03/06/nest-thermostat-hack-home-network/#5a23729e5cb0 http://www.computerworld.com/article/2476599/cybercrime-hacking/black-hat-nest-thermostat-turned-into-a-smart-spy-in-15-seconds.html
+Defcon 2016 http://motherboard.vice.com/read/internet-of-things-ransomware-smart-thermostat
+
+???
+
+also the nest has been hacked! Takes 15 seconds http://www.forbes.com/sites/aarontilley/2015/03/06/nest-thermostat-hack-home-network/#5a23729e5cb0 http://www.computerworld.com/article/2476599/cybercrime-hacking/black-hat-nest-thermostat-turned-into-a-smart-spy-in-15-seconds.html
 
 ---
 
 ![fit](samung-smart-home.png)
 
-^ https://www.wired.com/2016/05/flaws-samsungs-smart-home-let-hackers-unlock-doors-set-off-fire-alarms/
+???
+
+https://www.wired.com/2016/05/flaws-samsungs-smart-home-let-hackers-unlock-doors-set-off-fire-alarms/
 
 ---
 
@@ -276,14 +328,20 @@ void EIO_Open(uv_work_t* req) {
 
 ![fit](kill jeep.png)
 
-^ public ip address on the Internet, with easy to exploit c++ services
-^ https://www.wired.com/2015/07/hackers-remotely-kill-jeep-highway/
+???
+
+public ip address on the Internet, with easy to exploit c++ services
+???
+
+https://www.wired.com/2015/07/hackers-remotely-kill-jeep-highway/
 
 ---
 
 ![fit](make car go 1.png)
 
-^ https://twitter.com/ftrain/status/671394222218592256
+???
+
+https://twitter.com/ftrain/status/671394222218592256
 
 ---
 
@@ -323,7 +381,9 @@ void EIO_Open(uv_work_t* req) {
 
 ![fit](short history of js.png)
 
-^ JavaScript was born on the web
+???
+
+JavaScript was born on the web
 
 ---
 
@@ -346,14 +406,18 @@ void EIO_Open(uv_work_t* req) {
 
 # Intel gets it
 
-^ https://twitter.com/intel/status/734509277977530368
+???
+
+https://twitter.com/intel/status/734509277977530368
 
 ---
 
 ![fit](intel-reconbot-high.mp4)
 
 
-^ https://ostroproject.org/documentation/howtos/app-dev-nodejs.html
+???
+
+https://ostroproject.org/documentation/howtos/app-dev-nodejs.html
 
 ---
 
@@ -375,7 +439,9 @@ Worked with the Johnny-Five team to ensure device compatibility with all their n
 # Jibo
 Integrates with the atom editor to let you produce animations and develop "skills" in JavaScript for use through the Jibo robot interface.
 
-^ Jibo.com
+???
+
+Jibo.com
 
 ---
 
@@ -385,7 +451,9 @@ Integrates with the atom editor to let you produce animations and develop "skill
 
 ![](silk sense short.mp4)
 
-^ Take a smart phone, remove the screen, keep the camera and run nodejs and you get the sense
+???
+
+Take a smart phone, remove the screen, keep the camera and run nodejs and you get the sense
 
 ---
 
@@ -395,7 +463,9 @@ The "Sense camera and hub" provides JavaScript APIs for computer vision, advance
 
 Not from the cloud.
 
-^ http://www.silklabs.com/
+???
+
+http://www.silklabs.com/
 
 ---
 
@@ -405,7 +475,9 @@ Not from the cloud.
 
 ![fit](nodebots.png)
 
-^ A world wide educational community around teaching JavaScript and electronics
+???
+
+A world wide educational community around teaching JavaScript and electronics
 
 ---
 
@@ -413,7 +485,9 @@ Not from the cloud.
 
 ![](j5ik layout.jpg)
 
-^ https://www.sparkfun.com/products/13847
+???
+
+https://www.sparkfun.com/products/13847
 
 
 ---
